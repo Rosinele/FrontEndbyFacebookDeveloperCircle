@@ -1,0 +1,29 @@
+inicializar projeto Node
+ > npm init
+Dar um nome ao projeto
+Definir versão do Projeto
+Informar qual descrição do projeto
+Entry point para definir qual arquivos será executado primeiro
+keywords são palavras chaves sobre o projeto
+
+===============================================================================================================
+
+
+importar a biblioteca express
+arquivo.js: var expressjs = require("express");
+ 
+criar primeira aplicação que sera iniciada atraves da biblioteca express
+arquivo.js: var aplicacao = expressjs;
+ 
+Disponibilizar porta para acesso à aplicação
+arquivo.js: aplicacao.listen(8989);
+
+Adicionar express ao projeto
+terminal node: npm install express
+
+executar projeto
+node index.js
+
+ 
+ 
+ 
