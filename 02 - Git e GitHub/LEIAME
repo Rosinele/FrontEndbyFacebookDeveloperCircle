@@ -1,0 +1,14 @@
+Branch MASTER
+Branch EXPERIMENTO/DEVELOPER
+Branch BUGFIX
+
+Mostrar todas as informações de configuação do Git
+ - config --list
+ 
+Deleta arquivo da zona de stage
+ - git rm --cached leiame.txt
+ 
+Vizualizar todos os commits realizados
+ - git log
+ 
+ 
