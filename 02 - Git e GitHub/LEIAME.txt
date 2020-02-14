@@ -1,0 +1,38 @@
+﻿Branch MASTER
+Branch EXPERIMENTO/DEVELOPER
+Branch BUGFIX
+
+Mostrar todas as informações de configuação do Git
+ - config --list
+ 
+Deleta arquivo da zona de stage
+ - git rm --cached leiame.txt
+ 
+Vizualizar todos os commits realizados
+ - git log
+ 
+Acicionar mais de uma linha no comentário do Commit
+ - git commit
+
+Comparar dois Commmit (pegar código Hash)
+ - git diff hashcommit01 hashcommit02
+ 
+Mostrar detalhes das mudanças pós commit
+ - git show
+
+Voltar commit preservar o arquivo
+ - git reset --soft hashcommit01
+
+Voltar commit e alterar arquivo
+ - git reset --hard 
+
+Vizualizar conteúdo daquele commit
+ - git checkout hashcommit02
+ 
+Voltar para a visualização do Commit atual
+ - git checkout master
+ 
+ 
+
+ 
+ 
