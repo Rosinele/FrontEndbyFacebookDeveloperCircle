@@ -1,0 +1,52 @@
+*{
+    font: 12px sans-serif;
+}
+body{
+    background-image: url("imagens/fundo.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100%;
+   
+}
+
+h1{
+    font-size: 12px;
+}
+
+.botao{
+    width: 115px;
+    height: 25px;
+    background:#95ca3e;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+header > nav{
+    float: right;
+}
+
+header > nav > a{
+    padding: 25px 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+header{
+    margin-top: 25px;
+    height: 80px;
+}
+
+section{
+    text-align: center;
+}
+
+.logomarca{
+    width: 10%;
+}
+
+section > figure{
+    float: left;
+}
