@@ -73,4 +73,6 @@
             </table>
         </body>
         </html>
-  
+  - Configurar uma Viewport
+    <meta name=""viewport"" content=""width=device-width, initia-scale=1.0"">
+    
