@@ -90,10 +90,25 @@ Utilizamos bastante o numero 12 de colunas pois se torna mais fácil para realiz
         @media not print{...}
 
 Perguntas para levantamento de requisito da aplicalção
-O que?
-Quem?
-Onde?
-Como?
-Quando?
-por que?
-Quanto custa?
+    O que?
+    Quem?
+    Onde?
+    Como?
+    Quando?
+    por que?
+    Quanto custa?
+
+Seletores no class podem ser por:
+    Elemento
+    #id
+    .class
+    Elemento, Elemento
+    #id>Elemento
+    [atributo*=valor]
+
+Formas de ocultar
+  display: none;
+  Esconde elemento e remove espaço.
+
+  visibility: hidden;
+  Esconde elemento e não remove espaço
