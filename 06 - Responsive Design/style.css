@@ -1,0 +1,111 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background-image: url("https://www.decorfacil.com/wp-content/uploads/2018/02/20180214cor-verde.jpg");
+}
+
+h1 {
+    color: #f75d5d;
+}
+
+h2 {
+    color: #f75d5d;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+ul {
+    margin-top: 0px;
+}
+
+.desc {
+    font-size: 14px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.period {
+    font-style: italic;
+}
+
+.business, .school {
+    font-weight: bold;
+}
+[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+}
+
+#session1 .desc p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#session1 #image-container{
+    text-align: center;
+}
+
+#session1 #image-container img{
+    width: 40%;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+#session4{
+    background-image: url("https://www.armarinhosdezfios.com.br/image/cache/catalog/productimage/Verde-Limao-53-600x600.jpg");
+}
+
+#session3{
+    background-image: url("https://i1.wp.com/followthecolours.com.br/wp-content/uploads/2015/04/follow-the-colours-significado-cor-verde-shutterstock_226662040.jpg?w=960&ssl=1");
+    background-attachment: fixed; 
+}
+
+#session2{
+    background-color: #0fFF81;
+}
+@media(min-width: 768px) {
+    [class*="col-"] {
+        padding-right: -5px;
+
+    }
+    .col-md-4 {
+        width: calc(100% * 4/12 -31px);
+    }
+    .col-md-8 {
+        width: (100% * 8/12 -31px);
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+    #session1 .des, .desc .desc {
+        margin-bottom: 5px;
+        padding-top: 0px;
+        border-top-style: none;
+    }
+    #name {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #session .desc p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    h2, h1 {
+        margin-top: 0px;
+        vertical-align: top;
+    }
+    ul {
+        padding-inline-start: 15px;
+    }
+    .desc {
+        margin-bottom: 15px;
+        padding-top: 5px;
+        border-top-color: black;
+        border-top-width: 2px;
+        border-top-style: solid;
+    }
+}
