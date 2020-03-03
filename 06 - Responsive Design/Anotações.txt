@@ -75,4 +75,25 @@
         </html>
   - Configurar uma Viewport
     <meta name=""viewport"" content=""width=device-width, initia-scale=1.0"">
-    
+
+
+Media Queries
+
+Utilizamos bastante o numero 12 de colunas pois se torna mais fácil para realizar cálculos já que é divisivél por mais numeros
+
+  - Operadores lógicos
+    - E
+        @media (min-width: 700px) and (orientation: landscape){...}
+    - OU
+        @media (min-width: 700px), screen and (orientation: landscape){...}
+    - NOT
+        @media not print{...}
+
+Perguntas para levantamento de requisito da aplicalção
+O que?
+Quem?
+Onde?
+Como?
+Quando?
+por que?
+Quanto custa?
