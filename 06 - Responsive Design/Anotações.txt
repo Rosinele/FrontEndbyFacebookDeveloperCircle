@@ -1,0 +1,76 @@
+  Atalhos para codificar mais rápido
+  
+  - a 
+    <a href=""></a>
+
+  - label
+    <label for=""></label>
+
+  - input
+    <input type="text" name="" id="">
+
+  - body>div>inp #hierarquia
+    <body>
+        <div><input type="text" name="" id=""></div>
+    </body>
+
+  - body?div+div>inp+inp #concatenação
+    <body>
+        <div></div>
+        <div><input type="text" name="" id=""><input type="button" value=""></div>
+    </body>
+
+  - body>div*5 #multiplicação
+    <body>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+  </body>
+
+  - html>head+body>(div>input)*3 #agrupamento
+    <html>
+    <head></head>
+    <body>
+        <div><input type="text"></div>
+        <div><input type="text"></div>
+        <div><input type="text"></div>
+    </body>
+    </html>
+
+  -#id1
+    <div id="id1"></div>
+
+  -.classe
+    <div class="classe"></div>
+
+  -img#idimg.deimagem
+    <img src="" alt="" id="idimg" class="deimagem">
+
+  -a[href='https://tocadealuguel.com.br']
+     <a href="https://tocadealuguel.com.br"></a>
+
+  -html>head+body>h1{titulo}+.text{Isso é um texto}+table>(tr>td*2)*3
+    <html>
+        <head></head>
+        <body>
+            <h1>titulo</h1>
+            <div class="text">Isso é um texto</div>
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </body>
+        </html>
+  
