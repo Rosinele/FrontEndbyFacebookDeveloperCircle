@@ -120,3 +120,7 @@ CDNs
   developers.google.com/speed/libraries/#angularjs
 
 https://materialdesignicons.com/
+
+INTRODUÇÃO AO BOOTSTRAP 
+  col-tipo de tela-quantidade de colunas
+  offset-tipo de tela-quantidade de colunas
