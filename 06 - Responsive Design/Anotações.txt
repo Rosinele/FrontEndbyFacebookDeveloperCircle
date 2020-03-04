@@ -118,3 +118,5 @@ CDNs
   bootstrapcdn.com
   fonts-google.com
   developers.google.com/speed/libraries/#angularjs
+
+https://materialdesignicons.com/
