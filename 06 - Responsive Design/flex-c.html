@@ -1,0 +1,151 @@
+<!--html>head+body>h1{Conhecendo o flex}+(h2+.container.flex>.item{Item$}*7)*14-->
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flex.css">
+</head>
+<body>
+    <h1>Conhecendo o flex</h1>
+    <h2>display: block;</h2>
+    <p>O valor parão para o display é block</p>
+    <div class="container block">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Flex</h2>
+    <div class="container flex">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Flex Wrap</h2>
+    <div class="container flex flex-wrap">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Flex direction column</h2>
+    <div class="container flex direction-column">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Flex direction row reverse</h2>
+    <div class="container flex direction-row-reverse">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Alinhamento a esquerda</h2>
+    <div class="container flex justify-start">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Alinhamento a direita</h2>
+    <div class="container flex justify-end">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Alinhamento centralizado</h2>
+    <div class="container flex justify-center">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Alinhamento espaço igual entre itens</h2>
+    <div class="container flex justify-space-between">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Alinhamento espaço igual ao redor dos itens</h2>
+    <div class="container flex justify-space-around">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Alinhamento de itens stretch</h2>
+    <div class="container flex align-stretch">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Esse é um texto bem grande para desalinhar o Item3</div>
+        <div class="item">Aqui é um texto menor Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Alinhamento de itens flex-start</h2>
+    <div class="container flex align-start">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Esse é um texto bem grande para desalinhar o Item3</div>
+        <div class="item">Aqui é um texto menor Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Alinhamento de itens flex-end</h2>
+    <div class="container flex align-end">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Esse é um texto bem grande para desalinhar o Item3</div>
+        <div class="item">Aqui é um texto menor Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+    <h2>Alinhamento de itens center</h2>
+    <div class="container flex align-center">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Esse é um texto bem grande para desalinhar o Item3</div>
+        <div class="item">Aqui é um texto menor Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item7</div>
+    </div>
+</body>
+</html>

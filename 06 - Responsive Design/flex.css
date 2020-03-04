@@ -1,0 +1,67 @@
+.container {
+    border: 1px;
+    border-style: solid;
+    padding: 3px;
+    width: 95%;
+}
+
+.item {
+    background-color: #FF8800;
+    margin: 3px;
+    text-align: center;
+}
+
+.container.flex {
+    display: flex;
+}
+
+.container.flex.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.container.flex.direction-column {
+    flex-direction: column;
+}
+
+.container.flex.direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.container.flex.justify-start{
+    justify-content: flex-start;
+}
+
+.container.flex.justify-start{
+    justify-content: flex-start;
+}
+
+.container.flex.justify-end{
+    justify-content: flex-end;
+}
+
+.container.flex.justify-center{
+    justify-content: center;
+}
+
+.container.flex.justify-space-between{
+    justify-content: space-between;
+}
+.container.flex.justify-space-around{
+    justify-content: space-around;
+}
+
+.container.flex.align-stretch {
+    align-items: stretch;
+}
+
+.container.flex.align-start {
+    align-items: flex-start;
+}
+
+.container.flex.align-end {
+    align-items: flex-end;
+}
+
+.container.flex.align-center {
+    align-items: center;
+}
