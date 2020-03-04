@@ -34,43 +34,60 @@ ul {
 .business, .school {
     font-weight: bold;
 }
+
 [class*="col-"] {
     padding-right: 15px;
     padding-left: 15px;
     display: inline-block;
 }
 
-#session1 .desc p{
+#session1 .desc p {
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-#session1 #image-container{
+#session1 #image-container {
     text-align: center;
 }
 
-#session1 #image-container img{
+#session1 #image-container img {
     width: 40%;
     margin-bottom: 20px;
     border-radius: 50%;
 }
 
-#session4{
+#video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+#video-container iframe, #video-container object, #video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#session4 {
     background-image: url("https://www.armarinhosdezfios.com.br/image/cache/catalog/productimage/Verde-Limao-53-600x600.jpg");
 }
 
-#session3{
+#session3 {
     background-image: url("https://i1.wp.com/followthecolours.com.br/wp-content/uploads/2015/04/follow-the-colours-significado-cor-verde-shutterstock_226662040.jpg?w=960&ssl=1");
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
 
-#session2{
+#session2 {
     background-color: #0fFF81;
 }
+
 @media(min-width: 768px) {
     [class*="col-"] {
         padding-right: -5px;
-
     }
     .col-md-4 {
         width: calc(100% * 4/12 -31px);
