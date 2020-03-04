@@ -112,3 +112,9 @@ Formas de ocultar
 
   visibility: hidden;
   Esconde elemento e não remove espaço
+
+CDNs
+  cdnjs.com
+  bootstrapcdn.com
+  fonts-google.com
+  developers.google.com/speed/libraries/#angularjs
