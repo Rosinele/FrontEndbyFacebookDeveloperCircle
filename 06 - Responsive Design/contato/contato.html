@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" defer></script>
+    <script src="validator.js" defer></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Entre em contato </h1>
+        <div class="col-12 col-md-6 offset-md-3">
+            <form class="needs-validation">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="first-name">Nome</label>
+                        <input type="text" placeholder="Digite seu Nome" value="" id="firstName" class="form-control" required>
+                        <div class="invalid-feedback">Digite seu Nome</div>
+                    </div>
+                    <div class="col col-md-6 mb-3">
+                        <label for="last-name">Sobrenome</label>
+                        <input type="text" placeholder="Digite seu Sobrenome" value="" id="lastName" class="form-control" required>
+                        <div class="invalid-feedback">Digite seu Sobrenome</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label for="email">E-mail</label>
+                        <input type="email" placeholder="Digite seu e-mail" value="" id="email" class="form-control" required>
+                        <div class="invalid-feedback">Digite seu email</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label for="">Assunto</label>
+                        <select id="subject" class="form-control"required>
+                            <option value="1">Dúvida</option>
+                            <option value="2">Sugestões</option>
+                            <option value="3">Outros</option>
+                        </select>
+                        <div class="invalid-feedback"> Escolha o assunto que você queres falar</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" cols="30" rows="10" class="form-control" required></textarea>
+                        <div class="invalid-feedback">Digite sua mensagem</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col md-3 text-center">
+                        <button class="btn btn-primary">Enviar Mensagem</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
