@@ -12,3 +12,12 @@ TIPOS DE DADOS: BOOLEAN, NUMBER, UNDEFINED E NULL, OBJECT.
 		- Symbol (Utilizado para fazer algumas operações em objetos).
 		- Object (Conjunto de chaves e valores).
 		
+VARIÁVEIS
+	Para declarar um variável existem três modos
+		- var
+			var a = 5;
+		- let
+			let c = 10;
+		- const (Não permite que um novo valor seja atribuido a esta variável)
+			const j = 0;
+			ERROR APRESENTADO: Uncaught TypeError: Assigment to constant variable. at <anonymous>
