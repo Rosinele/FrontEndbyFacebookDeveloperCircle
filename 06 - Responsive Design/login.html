@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.18/angular-material.min.css">
+
+
+        <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-animate.min.js"></script>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-aria.min.js"></script>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-messages.min.js"></script>
+        <!-- Angular Material Library -->
+        <script defer src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.18/angular-material.min.js"></script>
+    </head>
+    <body>
+        <div layout="column" layout-align="center center" layout-fill="layout-fill">
+            <div class="loginBox md-whiteframe-z1" layout="column">
+                <md-toolbar>
+                    <h2 class="md-toolbar-tools">Login</h2>
+                </md-toolbar>
+                <form name="loginForm">
+                    <md-content class="md-padding" layout="column">
+
+                        <md-input-container>
+                            <label for="login">Email do login</label>
+                            <input type="email" name="login" required="required" ng-model="">
+                            <div ng-messages="">
+                                <ng-message>O seu email de Login é obrigatório</ng-message>
+                            </div>
+                        </md-input-container>
+
+                        <md-input-container>
+                            <label for="password">Senha</label>
+                            <input type="password" name="password" required="required" ng-model="">
+                            <div ng-messages="">
+                                <div ng-message="required">Sua senha é obrigatória</div>
+                            </div>
+                        </md-input-container>
+                        
+                        <div layout="row" layout-align="center center">
+                            <md-button class="md-raised md-primary">Login</md-button>
+                            <div flex="flex"></div>
+                            <md-button md-no-ink>Esqueci a senha</md-button>
+                        </div>
+
+                        <md-divider></md-divider>
+                        <button md-no-ink>Se cadastrar</button>
+                    </md-content>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    </body>
+</html>
