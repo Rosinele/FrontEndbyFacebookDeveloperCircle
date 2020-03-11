@@ -1,0 +1,14 @@
+TIPOS DE DADOS: BOOLEAN, NUMBER, UNDEFINED E NULL, OBJECT.
+
+	O JavaScript tem 7 tipos de dados, 6 deles são primitivos(Sem propriedades) e tem o object.
+		- Boolean 
+		- Number 
+		- String (Pode ser escrita entre 'aspas simples', "aspas" e `backticks`)
+			Interpolação de string permite colocar uma variavel dentro do backticks
+				var teste = 1;
+				console.log(typeof `backticks ${teste}`);
+		- Undefined (Quando não há atribuição de valores).
+		- Null (Tem valor atribuído, mas esse valor é vazio).
+		- Symbol (Utilizado para fazer algumas operações em objetos).
+		- Object (Conjunto de chaves e valores).
+		
