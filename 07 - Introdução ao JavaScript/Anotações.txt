@@ -142,3 +142,23 @@ ADIÇÃO E SUBTRAÇÃO
 	Os operadores + e - te permitem somar ou subtrair dois números ou variáveis normalmente. Em JavaScript, podem ser somados ou subtraídos números inteiros e decimais sem problemas.
 	O operador += permite incrementar uma variável de um número especificado e o operador -= permite decrementar uma variável de um número especificado. Também temos os operadores ++, que soma 1 à
 	variável, e --, que subtrai 1 da variável.
+
+MULTIPLICAÇÃO, DIVISAO E MÓDULO
+	O operador * é utilizado para multiplicação, o operador / é utilizado para divisão e o operador % é usado para o módulo de dois números. Em programação, módulo é a operação que obtém o resto da divisão entre dois números.
+
+COMPARAÇÃO DE VALORES 
+	Operadores de comparação:
+	Igual a (independente do tipo): ==
+	Igual a (dependente do tipo): ===
+	Diferente de (independente do tipo): !=
+	Diferente de (dependente do tipo): !==
+
+	Maior que: >
+	Maior ou igual a: >=
+	Menor que: <
+	Menor ou igual a: <=
+
+TIPOS DE VALOR E TIPOS DE referência
+	- Tipo de valor: quando você passa uma cópia do valor de certa variável para a função. O valor dentro da variável original que foi enviada não é alterado mesmo após a execução da função.
+	- Tipo de referência: quando você passa a referência do objeto para uma função. As alterações feitas à objeto nessa função também ocorrem com o objeto fora dela.
+
