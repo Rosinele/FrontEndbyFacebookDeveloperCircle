@@ -178,3 +178,30 @@ OBJETOS
 		const nome = "Rose"
 		const pessoa3 = {nome};
 		console.log(pesssoa3)
+
+ARRAYS
+	Array: uma lista de valores de qualquer tipo
+	- Declarando um array
+		const umArray = [1,2,3,4,5];
+	- Métodos de Array
+		- filter: Filtra um array baseado numa expressão matemática.
+					const arrayFilter = umArray.filter(n => n < 3);
+		- forEach: Faz uma iteração sobre todos os elementos do array e te devolve como o parâmetro de uma função.
+					umArray.forEach(n => console.log(n));
+		- map: Faz uma iteração sobre todos os elementos do array e te retorna um novo vetor.
+					const arrayMap = umArray.map(n => `Número ${n}`);
+					console.log(arrayMap);
+		- reduce: Reduz todos os valores do array para um único valor.
+					const arrayReduce = umArray.reduce(
+					(acumulador, valorAtual) => {
+					console.log({ acumulador, valorAtual });
+					return acumulador + valorAtual;
+					});					
+					console.log(arrayReduce);
+		- Operador spread: Pode ser usado para formar novos vetores a partir de outros vetores.
+					const par = [2,4];
+					const impar = [1,3];
+					const resultado = [...par, ...impar];
+					console.log(resultado);
+
+ 
