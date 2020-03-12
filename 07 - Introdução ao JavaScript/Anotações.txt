@@ -1,4 +1,4 @@
-TIPOS DE DADOS: BOOLEAN, NUMBER, UNDEFINED E NULL, OBJECT.
+TIPOS DE DADOS: BOOLEAN, NUMBER, UNDEFINED E NULL, object.
 
 	O JavaScript tem 7 tipos de dados, 6 deles são primitivos(Sem propriedades) e tem o object.
 		- Boolean 
@@ -10,7 +10,7 @@ TIPOS DE DADOS: BOOLEAN, NUMBER, UNDEFINED E NULL, OBJECT.
 		- Undefined (Quando não há atribuição de valores).
 		- Null (Tem valor atribuído, mas esse valor é vazio).
 		- Symbol (Utilizado para fazer algumas operações em objetos).
-		- Object (Conjunto de chaves e valores).
+		- object (Conjunto de chaves e valores).
 		
 VARIÁVEIS
 	Para declarar um variável existem três modos
@@ -162,3 +162,19 @@ TIPOS DE VALOR E TIPOS DE referência
 	- Tipo de valor: quando você passa uma cópia do valor de certa variável para a função. O valor dentro da variável original que foi enviada não é alterado mesmo após a execução da função.
 	- Tipo de referência: quando você passa a referência do objeto para uma função. As alterações feitas à objeto nessa função também ocorrem com o objeto fora dela.
 
+OBJETOS 
+	- como definir um objeto:
+		const pessoa = {nome: "Luís", idade: 30};
+		console.log(pessoa);
+	- Retorna uma lista com as propriedades do seu objeto
+		console.log(Object.keys(pessoa));
+	- Retorna os valores dos objetos
+		console.log(Object.values(pessoa));
+	- Retorna uma lista com dois itens (a propriedade e o valor)
+		console.log(Object.entries(pessoa));
+	- Operador spread cópia as propriedades de um objeto
+		const p = {...pessoa}
+	- Criar objetos com variáveis
+		const nome = "Rose"
+		const pessoa3 = {nome};
+		console.log(pesssoa3)
