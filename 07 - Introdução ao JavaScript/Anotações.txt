@@ -34,7 +34,56 @@ FUNÇÕES
 			console.log(parametro);
 		}
 		teste2("Impresso na segunda função");
-	- const test = (p1, p2) => {}    //arrow functions
+	- const test = (p1, p2) => {}    //arrow functions, se tiver apenas um parametronão será necessario colocar parentese
 		const teste3 = parametro => console.log(parametro)
 		teste3("Testando o tipo de declaração de função mais moderna")
-	
+		
+CONDICIONAIS
+	As 3 condicionais do JavaScript são: if e else, operador ternário e switch.
+
+	- O if e else, é usado para condições simples.
+		const simOuNao = true;
+		if (simOuNao){
+			console.log("Sim")
+		}else{
+			console.log("Não")
+		}
+	- O operador ternário é muito parecido com o if e else, mas permite escrever condições de forma mais simples e direta.
+		console.log(simOuNao ? "Sim" : "Não");
+	- O switch é usado para condições complicadas, onde há a presença de várias casos independentes.
+		const letra = "a";
+		switch (letra){
+		case "a";
+		case "e";
+		case "i";
+		case "o";
+		case "u";
+			console.log(´${letra} é uma vogal´);
+			break;
+		case "b"; 
+		case "c";
+		case "d";
+		case "f";
+		case "g";
+		case "h";
+		case "j";
+		case "k";
+		case "l";
+		case "m";
+		case "n";
+		case "p";
+		case "q";
+		case "r";
+		case "s";
+		case "t";
+		case "v";
+		case "x";
+		case "y";
+		case "w";
+		case "z";
+			console.log(´${letra} é uma consoante´);
+			break;
+		default:
+			console.log(´${letra} não é uma letra, favor verificar novamente´);
+			break;
+		}
