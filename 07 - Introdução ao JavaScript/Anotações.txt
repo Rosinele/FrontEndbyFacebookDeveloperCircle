@@ -21,3 +21,20 @@ VARIÁVEIS
 		- const (Não permite que um novo valor seja atribuido a esta variável)
 			const j = 0;
 			ERROR APRESENTADO: Uncaught TypeError: Assigment to constant variable. at <anonymous>
+
+FUNÇÕES
+	Existem três maneiras de criar uma função
+	- function teste(p1,p2){}
+		function teste(parametro){
+			console.log(parametro);
+		}
+		teste("Isto vai ser impresso");
+	- const test = function(p1, p2){}
+		const teste2 = function(parametro){
+			console.log(parametro);
+		}
+		teste2("Impresso na segunda função");
+	- const test = (p1, p2) => {}    //arrow functions
+		const teste3 = parametro => console.log(parametro)
+		teste3("Testando o tipo de declaração de função mais moderna")
+	
