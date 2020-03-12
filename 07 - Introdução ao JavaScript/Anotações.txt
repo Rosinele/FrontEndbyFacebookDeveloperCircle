@@ -124,8 +124,18 @@ no JavaScript:
 	- Escopo global: acessível em todas as partes do código no arquivo JS.
 	- Escopo de função: é acessível apenas dentro da função onde aquela variável foi declarada.
 	- Escopo de bloco: é acessível apenas dentro do bloco onde aquela variável foi declarada.
-	{
-		console.log(variavelGlobal);
-		const variavelDeBloco = 3;
-		console.log(variavelDeBloco);
-	}
+		{
+			console.log(variavelGlobal);
+			const variavelDeBloco = 3;
+			console.log(variavelDeBloco);
+		}
+
+TRATAMENTO DE ERROS (TRY, CATCH e FINALLY)
+	Tratamento de erros – Se um erro é lançado sem ser tratado, a
+engine para a execução do seu código e o programa fica travado. Para que isso não ocorra, é necessário tratar o erro. Para isso, são
+utilizados três operadores:
+
+	- try – um bloco onde o código é executado até que ocorra um erro. Caso haja um erro, a execução do bloco try e o erro é redirecionado ao bloco catch.
+	- catch – um bloco que é executado ao receber um erro do bloco try. Caso não ocorra erro, o catch não é executado.
+	- finally – um bloco final que sempre é executado, independente de um erro ter sido lançado ou não.
+	
