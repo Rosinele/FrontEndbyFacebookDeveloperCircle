@@ -110,8 +110,22 @@ LAÇOS
 		for (let chave in pessoa){
 			console.log(´${chave}´)
 		}
-	- for...of (Percorre todos os itens de uma lista)
+	- for...of (Percorre todos os itens de uma listaL)
 		const nomes = ["Luís", "João", "Maria"];
 		for (let nome of nomes){
 			console.log(nome);
 		}
+
+ESCORPO
+	O escopo é o contexto onde certas variáveis e expressões estão
+acessíveis dentro de uma área do código. Há três tipos de escopo
+no JavaScript:
+
+	- Escopo global: acessível em todas as partes do código no arquivo JS.
+	- Escopo de função: é acessível apenas dentro da função onde aquela variável foi declarada.
+	- Escopo de bloco: é acessível apenas dentro do bloco onde aquela variável foi declarada.
+	{
+		console.log(variavelGlobal);
+		const variavelDeBloco = 3;
+		console.log(variavelDeBloco);
+	}
