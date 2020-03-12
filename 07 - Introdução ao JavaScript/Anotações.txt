@@ -3,7 +3,7 @@ TIPOS DE DADOS: BOOLEAN, NUMBER, UNDEFINED E NULL, OBJECT.
 	O JavaScript tem 7 tipos de dados, 6 deles são primitivos(Sem propriedades) e tem o object.
 		- Boolean 
 		- Number 
-		- String (Pode ser escrita entre 'aspas simples', "aspas" e `backticks`)
+		- String (Pode ser escrita entre 'aspas simples', ´aspas´ e `backticks`)
 			Interpolação de string permite colocar uma variavel dentro do backticks
 				var teste = 1;
 				console.log(typeof `backticks ${teste}`);
@@ -28,15 +28,15 @@ FUNÇÕES
 		function teste(parametro){
 			console.log(parametro);
 		}
-		teste("Isto vai ser impresso");
+		teste(´Isto vai ser impresso´);
 	- const test = function(p1, p2){}
 		const teste2 = function(parametro){
 			console.log(parametro);
 		}
-		teste2("Impresso na segunda função");
+		teste2(´Impresso na segunda função´);
 	- const test = (p1, p2) => {}    //arrow functions, se tiver apenas um parametronão será necessario colocar parentese
 		const teste3 = parametro => console.log(parametro)
-		teste3("Testando o tipo de declaração de função mais moderna")
+		teste3(´Testando o tipo de declaração de função mais moderna´)
 		
 CONDICIONAIS
 	As 3 condicionais do JavaScript são: if e else, operador ternário e switch.
@@ -44,46 +44,74 @@ CONDICIONAIS
 	- O if e else, é usado para condições simples.
 		const simOuNao = true;
 		if (simOuNao){
-			console.log("Sim")
+			console.log(´Sim´)
 		}else{
-			console.log("Não")
+			console.log(´Não´)
 		}
 	- O operador ternário é muito parecido com o if e else, mas permite escrever condições de forma mais simples e direta.
-		console.log(simOuNao ? "Sim" : "Não");
+		console.log(simOuNao ? ´Sim´ : ´Não´);
 	- O switch é usado para condições complicadas, onde há a presença de várias casos independentes.
-		const letra = "a";
+		const letra = ´a´;
 		switch (letra){
-		case "a";
-		case "e";
-		case "i";
-		case "o";
-		case "u";
+		case ´a´;
+		case ´e´;
+		case ´i´;
+		case ´o´;
+		case ´u´;
 			console.log(´${letra} é uma vogal´);
 			break;
-		case "b"; 
-		case "c";
-		case "d";
-		case "f";
-		case "g";
-		case "h";
-		case "j";
-		case "k";
-		case "l";
-		case "m";
-		case "n";
-		case "p";
-		case "q";
-		case "r";
-		case "s";
-		case "t";
-		case "v";
-		case "x";
-		case "y";
-		case "w";
-		case "z";
+		case ´b´; 
+		case ´c´;
+		case ´d´;
+		case ´f´;
+		case ´g´;
+		case ´h´;
+		case ´j´;
+		case ´k´;
+		case ´l´;
+		case ´m´;
+		case ´n´;
+		case ´p´;
+		case ´q´;
+		case ´r´;
+		case ´s´;
+		case ´t´;
+		case ´v´;
+		case ´x´;
+		case ´y´;
+		case ´w´;
+		case ´z´;
 			console.log(´${letra} é uma consoante´);
 			break;
 		default:
 			console.log(´${letra} não é uma letra, favor verificar novamente´);
 			break;
+		}
+
+LAÇOS
+	Repetem uma ação por um determinado numero de vezes
+	- while (Desde que uma condição especificada seja verdadeira)
+		while (a < 10){
+			console.log(´valor de a: ${a}´);
+			a = a + 1;
+		}
+	- do...while (Executa a função pelo menos uma vez antes de avaliar)
+		let b = 0;
+		do {
+			console.log(´valor de b: ${b}´);
+			b = b + 1;
+		} while (b <10);
+	- for (Será repetido até que uma condição especifica seja falsa)
+		for (let c = 0; c < 10; c = c + 1){
+			console.log(´valor de c: ${c}´);
+		}
+	- for...in (percorre todas as propriedades de um objeto)
+		const pessoa = { nome: ´Luis´, idade: 30};
+		for (let chave in pessoa){
+			console.log(´${chave}´)
+		}
+	- for...of (Percorre todos os itens de uma lista)
+		const nomes = ["Luís", "João", "Maria"];
+		for (let nome of nomes){
+			console.log(nome);
 		}
