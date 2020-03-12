@@ -131,11 +131,14 @@ no JavaScript:
 		}
 
 TRATAMENTO DE ERROS (TRY, CATCH e FINALLY)
-	Tratamento de erros – Se um erro é lançado sem ser tratado, a
-engine para a execução do seu código e o programa fica travado. Para que isso não ocorra, é necessário tratar o erro. Para isso, são
-utilizados três operadores:
+	Tratamento de erros – Se um erro é lançado sem ser tratado, a engine para a execução do seu código e o programa fica travado. Para que isso não ocorra, é necessário tratar o erro. Para isso, são utilizados três operadores:
 
 	- try – um bloco onde o código é executado até que ocorra um erro. Caso haja um erro, a execução do bloco try e o erro é redirecionado ao bloco catch.
 	- catch – um bloco que é executado ao receber um erro do bloco try. Caso não ocorra erro, o catch não é executado.
 	- finally – um bloco final que sempre é executado, independente de um erro ter sido lançado ou não.
-	
+
+ADIÇÃO E SUBTRAÇÃO
+	Operadores de adição e subtração:
+	Os operadores + e - te permitem somar ou subtrair dois números ou variáveis normalmente. Em JavaScript, podem ser somados ou subtraídos números inteiros e decimais sem problemas.
+	O operador += permite incrementar uma variável de um número especificado e o operador -= permite decrementar uma variável de um número especificado. Também temos os operadores ++, que soma 1 à
+	variável, e --, que subtrai 1 da variável.
