@@ -230,4 +230,13 @@ DATE
 		getTime(): retorna o epoch time (a quantidade de segundos passados desde a meia-noite do dia 1 de janeiro de 1970.
 		getDay(): retorna o dia da semana.
 		setDate(): seleciona um novo dia para o objeto Date.
-	
+
+EXPRESSÕES REGULARES
+	- Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string.
+		const regex = [A-Z/ig];
+		const regex2 = new RegExp('[A-Z]', 'ig');
+	- Os quatro principais métodos para trabalhar com expressões regulares no JavaScript são:
+		exec: retorna o primeiro resultado que satisfaz a sua expressão regular
+		test: retorna um resultado verdadeiro ou falso que diz se existe uma string que satisfaz aquela expressão
+		match: retorna todas as strings que satisfazem a expressão regular
+		replace: substitui os valores que satisfazem a expressão regular com um novo valor
