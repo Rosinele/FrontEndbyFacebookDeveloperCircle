@@ -204,4 +204,30 @@ ARRAYS
 					const resultado = [...par, ...impar];
 					console.log(resultado);
 
- 
+DESESTRUTURAÇÃO DE OBJETOS E ARRAYS
+	- Desestruturação de objetos: Permite formar novas variáveis usando propriedades de objetos.
+		const pessoa = { nome: ‘Luís’, idade: 30 };
+		const { nome } = pessoa;
+		console.log(outroNome);
+	- Desestruturação de array: Permite formar novas variáveis usando elementos de um array.
+		const letras = [‘a’, ‘b’, ‘c’, ‘d’];
+		const [um, dois] = letras;
+		console.log(um);
+		console.log(dois);
+
+DATE
+	Objeto Date – usado para trabalhar com datas no JavaScript. É possível criar uma data baseada no momento atual ou até fazer novas datas baseadas num tempo de seu interesse.
+	- Mostrar data atual
+		const agora = new Date();
+	- Métodos:
+		getFullYear(): retorna o ano atual no formato AAAA.
+		getMonth(): retorna o mês atual representado de 0 (Janeiro) a 11 (Dezembro).
+		getDate(): retorna o dia atual.
+		getHours(): retorna a hora atual.
+		getMinutes(): retorna os minutos atuais.
+		getSeconds(): retorna os segundos atuais.
+		getMiliseconds(): retorna os milissegundos atuais.
+		getTime(): retorna o epoch time (a quantidade de segundos passados desde a meia-noite do dia 1 de janeiro de 1970.
+		getDay(): retorna o dia da semana.
+		setDate(): seleciona um novo dia para o objeto Date.
+	
