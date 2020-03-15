@@ -240,3 +240,22 @@ EXPRESSÕES REGULARES
 		test: retorna um resultado verdadeiro ou falso que diz se existe uma string que satisfaz aquela expressão
 		match: retorna todas as strings que satisfazem a expressão regular
 		replace: substitui os valores que satisfazem a expressão regular com um novo valor
+
+A PALAVRA RESERVADA THIS
+	A palavra reservada ““this”” retorna um objeto que depende do contexto onde é invocada.
+	Ao ser chamada dentro de uma função normal, será retornado um objeto dependente do escopo daquela função. Ao ser chamada dentro de uma arrow function, será retorna um objeto do escopo acima de onde a função está sendo executada.
+		let pessoa = {
+			nome: 'Luís',
+			thisComFuncao: function(){
+				console.log(this);
+				console.log(this !== window);
+			},
+			thisComArrowFunction:() =>{
+				console.log(this);
+				console.log(this === window);
+			}
+		};
+
+		pessoa.thisComFuncao();
+		pessoa.thisComFuncao();
+		
