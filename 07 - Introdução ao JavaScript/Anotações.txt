@@ -266,3 +266,67 @@ PARÂMETROS OPCIONAIS
 PARÂMETROS REST 
 	Parâmetros rest são usados para indicar um número indefinido de parâmetros que podem ser utilizados ao chamar um método. São declarados introduzindo um três pontos (…) antes do nome do parâmetro.
 		const comRest = (a, b, …extraArgs) => { console.log(extraArgs); }
+
+CRIANDO E UTILIZANDO CLASSES
+	A orientação à objetos permite ao programador criar classes, que, depois, podem ser instanciadas em objetos. Para criar uma classe em JavaScript, utiliza-se a palavra reservada class.
+	Muitas classes precisam de um construtor, que é um método que é executado assim que um novo objeto daquela classe é instanciado. Esse método pode receber parâmetros e é bastante útil para atribuir características ao objeto, logo no momento da criação dele.
+		class Pessoa{
+			constructor(nome, idade){
+				console.log("Criando uma objeto do tipo Pessoa");
+				console.log(nome, idade);
+			}
+		}
+		const p = new Pessoa("Rose", 22);
+
+DECLARANDO PROPRIEDADE E MÉTODOS 
+	Agora que sabemos declarar classes, veremos como adicionar propriedades, comportamentos ou métodos a ela. As propriedades funcionam como variáveis que ficam atreladas a um objeto que faz parte daquela classe, elas podem ser declaradas, dentro do construtor, fazendo: this.variavel = 10;
+	Os métodos são como funções normais que ficam dentro do bloco da classe, mas não levam a palavra reservada function. Eles podem ser usados para manipular os parâmetros do objeto, além de executar um conjunto de instruções relevantes para aquela classe.
+		class Pessoa{
+			constructor(nome, idade){
+				this.nome = nome;
+				this.idade = idade;
+			}
+			teste(){
+				console.log(this);
+			}
+		}
+		const p = new Pessoa("Rose", 22);
+		console.log(p);
+		p.teste();
+
+PROPRIEDADE E MÉTODOS ESTÁTICOS
+	class Pessoa{
+		static teste(){
+			console.log(this);
+		}
+	}
+	Pessoa.teste();
+
+HERANÇA
+	Herança é um conceito de orientação a objetos que permite a uma classe herdar as propriedades e métodos de outra classe.
+	A palavra-chave extends indica que uma classe é estendida, ou seja, herda, os métodos e propriedades de outra classe. Para acessar o construtor ou características da classe mãe, pode ser usada a palavra reservada super.
+		class Pessoa{
+			constructor(tipo){
+				this.tipo = tipo;
+			}
+			getTipo(){
+				return this.tipo;
+			}
+		}
+
+		class Usuario extends Pessoa{
+			constructor(){
+				super('usuário');
+			}
+		}
+		class Administrador extends Pessoa{
+			constructor(){
+				super('admin');
+			}
+		}
+
+		var u - new Usuario();
+		console.log(u.getTipo());
+
+		var u - new Administrador();
+		console.log(u.getTipo());
