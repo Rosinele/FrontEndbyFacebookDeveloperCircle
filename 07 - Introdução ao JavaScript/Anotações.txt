@@ -258,4 +258,11 @@ A PALAVRA RESERVADA THIS
 
 		pessoa.thisComFuncao();
 		pessoa.thisComFuncao();
-		
+
+PARÂMETROS OPCIONAIS
+	Parâmetros opcionais são parâmetros de funções ou objetos que já têm valores padrões pré-definidos e que não precisam ser especificados ao invocar aquela função ou objeto.
+		const multiplique = (n1 = 1, n2 = 1) => n1 * n2
+
+PARÂMETROS REST 
+	Parâmetros rest são usados para indicar um número indefinido de parâmetros que podem ser utilizados ao chamar um método. São declarados introduzindo um três pontos (…) antes do nome do parâmetro.
+		const comRest = (a, b, …extraArgs) => { console.log(extraArgs); }
