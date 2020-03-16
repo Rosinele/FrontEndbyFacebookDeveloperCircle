@@ -346,3 +346,19 @@ DOM (DOCUMENT OBJECT MODEL) E BOM (BROWSER OBJECT MODEL)
 		console.error() - imprime um erro no console indicando a localização do erro no código.
 		alert(’’) - mostra um pop-up na tela com uma mensagem de alerta.
 		prompt() - mostra uma pop-up com uma caixa de texta para entrada de dados.
+
+ O QUE É UM EVENTO?
+	Eventos são acionados por mudanças de estado na página, por exemplo: quando a página é carregado (evento de load), quando a janela do navegador é redimensionada (evento de resize), quando a página é deslizada (evento de scroll), etc.
+
+REAGINDO A EVENTOS 
+	Para executar alguma ação quando um evento é disparado, utiliza-se o método addEventListener, que fica “ouvindo” se certo evento é executado, com uma arrow function como segundo parâmetro.
+	O método addEventListener pode ser usado em diversos elementos da página, o que é útil para saber se o evento foi acionado por uma mudança de estado na janela, num botão, numa caixa de texto ou outro elemento da página.
+		const botao = document.getElementById(‘botao’);
+		botao.addEventListener('click’, () => {
+		console.log('botão clicado’);
+		});
+
+PROPAGAÇÃO DE EVENTOS
+	A propagação de erros ocorre quando mais de um elemento são acionados por uma única ação. Por exemplo, ao clicar em certa parte da tela, tanto o elemento que foi clicado e o elemento-pai em que o primeiro está contido respondem ao evento.
+	Para evitar problemas com a propagação de erro, deve-se adicionar o método stopPropagation() dentro dos elementos mais internos de forma a impedir que os elementos-pais reajam ao evento.
+
