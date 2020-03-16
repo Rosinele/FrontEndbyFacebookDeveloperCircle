@@ -424,3 +424,13 @@ ASYNC E AWAIT
 		const dados = await result.json();
 		console.log(dados);
 		};
+
+MODULARIZANDO SEU CÓDIGO COM ES MODULOS
+	Nessa aula, será ensinado como usar o ES modules para estruturar melhorar a sua aplicação. O uso destes módulos, através das palavras reservados export e import, te permite pôr funções e variáveis em arquivos separados que podem ser acessados pelo resto do programa, permitindo ter uma organização melhor e evitar reescrever a lógica do seu programa em vários arquivos.
+		import * as mathUtils from './utils-math';
+		import getPrimeiraLetra from './getPrimeiraLetra';
+		console.log(mathUtils.soma(1, 2));
+		//
+		export const soma = (n1, n2) => n1, n2;
+		//
+		export default s => s.substr(0, 1);
