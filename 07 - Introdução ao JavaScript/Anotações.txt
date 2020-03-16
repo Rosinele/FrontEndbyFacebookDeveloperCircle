@@ -332,3 +332,17 @@ HERANÇA
 		console.log(u.getTipo());
 
 DOM (DOCUMENT OBJECT MODEL) E BOM (BROWSER OBJECT MODEL)
+	- DOM, Document Object Model, é como interagimos com a página HTML. É a forma como manipulamos botões e caixas de texto, por exemplo. Para instanciar elementos que foram declaramos na página HTML, usamos os seguintes métodos do JavaScript:
+		document.getElementById() - retorna um objeto pertencente ao elemento que tem o ID determinado.
+		divAula.classList.remove('hide');
+		.value //retorna o valor do objeto
+		document.getElementByClassName() - retorna uma lista de objetos que têm a classe determinada.
+		.length //retorna a quantidade de vezes que aquela classe aparece
+		document.getElementByTagName() - retorna uma lista de objetos com aquela tag.
+
+	- BOM, Browser Object Model, é como interagimos com o navegador. Usado para pedir permissões para enviar notificações, consultar a URL atual, verificar as dimensões da janela ou a geolocalização do usuário. Alguns métodos para interagir com o BOM são:
+		console.log() - imprime algum texto no console.
+		console.warn() - imprime um aviso no console indicando a localização do aviso no código.
+		console.error() - imprime um erro no console indicando a localização do erro no código.
+		alert(’’) - mostra um pop-up na tela com uma mensagem de alerta.
+		prompt() - mostra uma pop-up com uma caixa de texta para entrada de dados.
