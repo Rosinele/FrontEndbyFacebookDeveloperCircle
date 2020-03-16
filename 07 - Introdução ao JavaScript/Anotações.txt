@@ -445,4 +445,15 @@ ESLINT
 	Veremos como instalar e rodar o ESLint e alguns exemplos de regras que podem ser aplicadas.
 		.eslintrc
 		npm install -g eslint
-	eslint.organização (todas as regras para que meu site possa seguir) 
+	eslint.organização (todas as regras para que meu site possa seguir)
+
+WEBPACK
+	O Webpack permite juntar vários arquivos e módulos em um só que podem ser baixados pelo servidor. Isso é útil para diminuir o tamanho do código a ser baixado pelo usuário gastando menos dados e tornando a página mais rápida.
+	Veremos como instalar os módulos necessário e configurar o nosso app em mode de desenvolvimento e produção usando o Webpack.
+
+	-modo de desenvolvimento
+		npm install -g webpack webpack-cli 
+		webpack --mode development index.js (cria pasta dist)
+	-modo de producao
+		webpack --mode production index.js
+
