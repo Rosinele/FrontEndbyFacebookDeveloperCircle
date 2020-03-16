@@ -434,3 +434,15 @@ MODULARIZANDO SEU CÓDIGO COM ES MODULOS
 		export const soma = (n1, n2) => n1, n2;
 		//
 		export default s => s.substr(0, 1);
+
+PRETTIER
+	O Node.js nos permite executar scripts de JavaScript no computador, sem precisar rodar dentro de um navegador ou uma página, permitindo rodar a partir da linha de comando.
+	O NPM, Node Package Manager ou Gerenciador de Pacotes do Node, é a ferramenta que você utiliza para instalar qualquer biblioteca ou ferramenta nova que te auxilie no seu trabalho. O NPM é, de certa forma, como a Play Store da Google ou a App Store da Apple, ou seja, um lugar centralizado onde você pode instalar ferramentas novas.
+	O prettier é uma ferramenta que auxilia com a padronização e formatação do seu código, o que ajuda ao trabalhar em equipe mantendo um estilo mais consistente de escrita. Veremos como instalar e usar o prettier.
+		npm install prettier -g
+ESLINT
+	O ESLint permite definir regras que devem ser seguidas no seu código. Isso é feito através de arquivos de configuração que podem ser usados em vários projetos, sendo bastante útil para empresas.
+	Veremos como instalar e rodar o ESLint e alguns exemplos de regras que podem ser aplicadas.
+		.eslintrc
+		npm install -g eslint
+	eslint.organização (todas as regras para que meu site possa seguir) 
