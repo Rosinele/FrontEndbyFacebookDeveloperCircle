@@ -330,3 +330,5 @@ HERANÇA
 
 		var u - new Administrador();
 		console.log(u.getTipo());
+
+DOM (DOCUMENT OBJECT MODEL) E BOM (BROWSER OBJECT MODEL)
