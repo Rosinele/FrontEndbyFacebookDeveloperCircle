@@ -362,3 +362,22 @@ PROPAGAÇÃO DE EVENTOS
 	A propagação de erros ocorre quando mais de um elemento são acionados por uma única ação. Por exemplo, ao clicar em certa parte da tela, tanto o elemento que foi clicado e o elemento-pai em que o primeiro está contido respondem ao evento.
 	Para evitar problemas com a propagação de erro, deve-se adicionar o método stopPropagation() dentro dos elementos mais internos de forma a impedir que os elementos-pais reajam ao evento.
 
+CALLBACKS
+	No JavaScript há apenas uma thread principal, por isso o código não pode conter ações que demorem muito tempo, pois isso travaria a execução do programa. Para contornar este problema, é utilizada a programação assíncrona que permite executar partes do código fora da thread principal evitando que esta fique bloqueada.
+	- Existem 3 formas de usar programação assíncrona no JavaScript: callbacks, promises e async e await. O jeito mais tradicional é usar o callback, que é feito usando uma arrow function dentro do método setTimeout().
+    Executa o callback dentro de 1 segundo (1000 milissegundos) */
+		setTimeout(() => {
+				console.log('O callback foi executado');
+		}, 1000);
+		const operacaoDemorada = (callback) => {
+			console.log("começando operação");
+			setTimeout(() =>{
+				console.log("Finalizando operação");
+				callback({nome: "Luís"});
+			}, 1500);	
+		};
+		operacaoDemorada((pessoa) => {
+			console.log(pessoa);
+		});
+
+PROMISES
