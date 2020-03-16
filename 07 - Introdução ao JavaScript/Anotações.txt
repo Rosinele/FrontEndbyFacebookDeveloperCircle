@@ -399,3 +399,28 @@ PROMISES
 		.catch((erro) =>{
 			console.log(erro.message);
 		})
+
+ASYNC E AWAIT 
+	O async e await é uma sintaxe especial que te permite trabalhar com promises de forma mais sequencial e confortável, permitindo inclusive pôr trechos de código de programação assíncrono dentro de blocos try/catch.
+		const operacaoDemorada = (callback) => {
+		console.log(‘começando a operação’);
+		return new Promise((resolve, reject) => {
+		setTimeout( () => {
+		console.log(‘finalizando…’);
+		resolve({ nome: ‘Luís’ });
+		/* reject(new Error(‘ops’)); */
+		}, 1500);
+		});
+		};
+
+    const rodeApp = async () => {
+		const pessoa = await operacaoDemorada();
+		console.log(pessoa);
+   		 };
+		rodeApp();
+	O async e await é também muito utilizado para fazer requisições HTTP.
+		const busqueUsuario = async () => {
+		const result = await fetch(‘https://reqres.in/api/users/2’);
+		const dados = await result.json();
+		console.log(dados);
+		};
