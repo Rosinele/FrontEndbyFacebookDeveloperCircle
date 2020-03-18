@@ -84,3 +84,7 @@ BICLIOTECAS PARA ESTILIZAR COMPONETES
             return <h3 className="platzi">Tchau {this.props.nome}</h3>
             }
         }
+
+USESTATE
+    Gerencia os estados internos de componentes funcionais.
+    O primeiro argumento refere-se ao padrão desse estado, o estado inicial. O segundo arqumento é uma função para que você consiga alterar o estado.
