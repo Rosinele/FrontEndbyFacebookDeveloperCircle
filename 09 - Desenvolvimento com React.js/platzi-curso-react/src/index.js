@@ -1,80 +1,43 @@
-import React from 'react'; 
+import React from 'react';
 import ReactDOM from 'react-dom'; //Renderizar os componentes no DOM (Existem também o react nativa, react-canvas)
 import './index.css'
 
-class Resultado extends React.Component{
-    render(){
-        return <h1>{this.props.resultado}</h1>;
-    }
-    componentDidUpdate(prevProps, prevState){
-        console.log(
-            prevProps.resultado,
-            this.props.resultado
-        );
-    }
-}
-class Contador extends React.Component{
-    state= {
-        valor: 0
-    }
-    componentDidMount(){
-        console.log("componentDidMount");
-        this.timerID = setInterval(() =>{
-            this.setState(s => ({
-                valor: s.valor + 1
-            }))
-        }, 600);
-    }
-    componentWillUnmount(){
-        clearInterval(this.timerID);
-    }
-    componentDidUpdate(prevProps, prevState){}
-        render(){
-            return(
-                <div>
-                    <Resultado resultado={this.state.valor}/>
-                </div>
-            );
-    }
-}
+const pessoas = [{
+    id: 1,
+    nome: "Rose"
+}, {
+    id: 2,
+    nome: "Fernanda"
+}, {
+    id: 3,
+    nome: "Monica"
+}, {
+    id: 4,
+    nome: "Yasmin"
+}, {
+    id: 5,
+    nome: "Maria"
+}];
 
-class App extends React.Component{
-    state ={
-        mostrarContador: true
-    };
-    toggleMostrador = () =>{
-        this.setState(s => ({
-            mostrarContador: !s.mostrarContador
-        }));    
-    };
+const Pessoa = (p) => (
+    <li>
+        <strong>{p.id}</strong>- {p.nome}
+    </li>
+)
 
-    render(){
-        if(!this.state.mostrarContador){
-            return(
-                <div>
-                    <input
-                        type="checkbox" 
-                        checked={this.state.mostrarContador} 
-                        onChange={this.toggleMostrador}
-                    />
-                </div>
-            );
-        }
-        return (
-        <div>
-            <input 
-                type="checkbox" 
-                checked={this.state.mostrarContador} 
-                onChange={this.toggleMostrador}
-            />
-            <Contador/>
-        </div>
-        );
-    }
-}
+const App = () => (
+    <ul>
+        {pessoas.map(p => (
+            <Pessoa
+                key={p.id.toString()}
+                id={p.id}
+                nome={p.nome} />
+        ))}
+    </ul>
+);
 
 ReactDOM.render(
-    <App/>,
+    <App />,
     document.getElementById('root')
 );
 
