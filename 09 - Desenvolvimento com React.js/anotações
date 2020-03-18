@@ -67,3 +67,20 @@ ReactDOM.render(
     </div>,
     document.getElementById('root')
 );
+
+BICLIOTECAS PARA ESTILIZAR COMPONETES
+    https://github.com/MicheleBertoli/css-in-js
+    Mais utilizadas são: style-components e emotion.
+    //É criado um objeto style dentro do próprio componente
+        const Oi = (props) => (
+            <h1 style={{
+                backgroundColor: "pink"
+            }}>Olá, {props.nome}</h1>
+        );
+
+    //Pode ser por um arquivo externo .css utilizando a classe
+        class Tchau extends React.Component{
+            render(){
+            return <h3 className="platzi">Tchau {this.props.nome}</h3>
+            }
+        }

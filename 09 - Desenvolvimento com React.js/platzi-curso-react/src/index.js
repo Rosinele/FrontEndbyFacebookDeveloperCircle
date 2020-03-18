@@ -1,5 +1,6 @@
 import React from 'react'; 
 import ReactDOM from 'react-dom'; //Renderizar os componentes no DOM (Existem também o react nativa, react-canvas)
+import './index.css'
 
 /*const ElementoComJSX = (props) => (
     <div className="platzi" autoCorrect>
@@ -17,13 +18,15 @@ ReactDOM.render(
 
 //Componente funcional
 const Oi = (props) => (
-    <h1>Olá, {props.nome}</h1>
+    <h1 style={{
+        backgroundColor: "pink"
+    }}>Olá, {props.nome}</h1>
 );
 
 //componente de classe (Todo componente de classe tem que ter a função render() para devolver alguma coisa)
 class Tchau extends React.Component{
     render(){
-    return <h3>Tchau {this.props.nome}</h3>
+    return <h3 className="platzi">Tchau {this.props.nome}</h3>
     }
 }
 
