@@ -2,53 +2,79 @@ import React from 'react';
 import ReactDOM from 'react-dom'; //Renderizar os componentes no DOM (Existem também o react nativa, react-canvas)
 import './index.css'
 
-/*const ElementoComJSX = (props) => (
-    <div className="platzi" autoCorrect>
-        <h1>{props.texto}</h1>
-    </div>
-);
-
-ReactDOM.render(
-    <div>
-        <ElementoComJSX texto="Olá, Rose! Fizemos um Componente agora"/>
-    <ElementoComJSX texto="Olha só, estou reutilizando um componente"/> 
-    </div>,
-    document.getElementById('root')
-);*/
-
-class Platzi extends React.Component{
-    state = {
-        texto: "Hi, "
-    }
-    handleButtonClick = () => {
-        this.setState(previousState => {
-            return{
-                texto: 
-                    previousState.texto === "Hi, "
-                    ? 'Tchau, '
-                    : "Hi, "
-            };
-        }) //setState mescla com o state definido anteriormente, adicionando ou substituindo propriedades, conforme nome que for definido para a propriedade
-    }
+class Resultado extends React.Component{
     render(){
-        return (
-            <div>
-                <h3 className="platzi">
-                    {this.state.texto} {this.props.nome}
-                </h3>
-                <button onClick={this.handleButtonClick}>Sair</button>
+        return <h1>{this.props.resultado}</h1>;
+    }
+    componentDidUpdate(prevProps, prevState){
+        console.log(
+            prevProps.resultado,
+            this.props.resultado
+        );
+    }
+}
+class Contador extends React.Component{
+    state= {
+        valor: 0
+    }
+    componentDidMount(){
+        console.log("componentDidMount");
+        this.timerID = setInterval(() =>{
+            this.setState(s => ({
+                valor: s.valor + 1
+            }))
+        }, 600);
+    }
+    componentWillUnmount(){
+        clearInterval(this.timerID);
+    }
+    componentDidUpdate(prevProps, prevState){}
+        render(){
+            return(
+                <div>
+                    <Resultado resultado={this.state.valor}/>
+                </div>
+            );
+    }
+}
 
-            </div>
-        );      
+class App extends React.Component{
+    state ={
+        mostrarContador: true
+    };
+    toggleMostrador = () =>{
+        this.setState(s => ({
+            mostrarContador: !s.mostrarContador
+        }));    
+    };
+
+    render(){
+        if(!this.state.mostrarContador){
+            return(
+                <div>
+                    <input
+                        type="checkbox" 
+                        checked={this.state.mostrarContador} 
+                        onChange={this.toggleMostrador}
+                    />
+                </div>
+            );
+        }
+        return (
+        <div>
+            <input 
+                type="checkbox" 
+                checked={this.state.mostrarContador} 
+                onChange={this.toggleMostrador}
+            />
+            <Contador/>
+        </div>
+        );
     }
 }
 
 ReactDOM.render(
-    <div>
-        <Platzi nome="João"/>
-        <hr/>
-        <Platzi nome="Rose"/>
-    </div>,
+    <App/>,
     document.getElementById('root')
 );
 
