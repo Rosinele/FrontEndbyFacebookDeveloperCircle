@@ -16,32 +16,38 @@ ReactDOM.render(
     document.getElementById('root')
 );*/
 
-//Componente funcional
-const Oi = (props) => (
-    <h1 style={{
-        backgroundColor: "pink"
-    }}>Olá, {props.nome}</h1>
-);
-
-//componente de classe (Todo componente de classe tem que ter a função render() para devolver alguma coisa)
-class Tchau extends React.Component{
+class Platzi extends React.Component{
+    state = {
+        texto: "Hi, "
+    }
+    handleButtonClick = () => {
+        this.setState(previousState => {
+            return{
+                texto: 
+                    previousState.texto === "Hi, "
+                    ? 'Tchau, '
+                    : "Hi, "
+            };
+        }) //setState mescla com o state definido anteriormente, adicionando ou substituindo propriedades, conforme nome que for definido para a propriedade
+    }
     render(){
-    return <h3 className="platzi">Tchau {this.props.nome}</h3>
+        return (
+            <div>
+                <h3 className="platzi">
+                    {this.state.texto} {this.props.nome}
+                </h3>
+                <button onClick={this.handleButtonClick}>Sair</button>
+
+            </div>
+        );      
     }
 }
 
-const nome = "Rose";
-const nome2 = "Maria";
-const nome3 = "Victor";
-
 ReactDOM.render(
     <div>
-        <Oi nome={nome}/>
-        <Tchau nome={nome}/>
-        <Oi nome={nome2}/>
-        <Tchau nome={nome2}/>
-        <Oi nome={nome3}/>
-        <Tchau nome={nome3}/>
+        <Platzi nome="João"/>
+        <hr/>
+        <Platzi nome="Rose"/>
     </div>,
     document.getElementById('root')
 );
