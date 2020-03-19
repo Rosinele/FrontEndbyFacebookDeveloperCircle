@@ -1,47 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; //Renderizar os componentes no DOM (Existem também o react nativa, react-canvas)
 
-const cotacao = 5;
-const convertaDolarEmReal = dolar =>
-    dolar * cotacao;
-const convertaRealEmDolar = real =>
-    real / cotacao;
-
-const InputDeValor = ({ 
-    moeda, 
-    valor, 
-    onChange 
-}) => {
+const IdiomaContext = React.createContext();
+const Ola = () => {
+    const ctx = React.useContext(IdiomaContext);
+    return (
+        <h1>
+            {ctx.idioma === 'pt-BR' ? 'Olá' : 'Hello'}
+        </h1>
+    );
+};
+const MudaIdioma = () => {
+    const ctx = React.useContext(IdiomaContext);
     return (
         <div>
-            <label>{moeda}</label>
-            <input 
-                type="number" 
-                value={valor || ''} 
-                onChange={e => onChange(e.target.value)}
-            />
+            <button
+                onClick={() => ctx.setIdioma('pt-BR')}
+            >
+                    português
+            </button>
+            <button
+                 onClick={() => ctx.setIdioma('en')}
+            >
+                inglês
+            </button>
         </div>
     );
 };
 
 const App = props => {
-    const [
-        valorEmDolar, 
-        setValorEmDolar
-    ] = React.useState();
+    const [idioma, setIdioma] = React.useState(
+        'pt-BR'
+    );
     return (
+        <IdiomaContext.Provider
+            value={{ idioma, setIdioma }}
+        >
         <div>
-            <InputDeValor 
-                moeda="R$"
-                valor={convertaDolarEmReal(valorEmDolar)}
-                onChange={v => setValorEmDolar(convertaRealEmDolar(v))}
-            />
-            <InputDeValor
-                 moeda="US$"
-                 valor={valorEmDolar}
-                 onChange={v => setValorEmDolar(v)}
-            />
+            <Ola />
+            <MudaIdioma />
         </div>
+        </IdiomaContext.Provider>      
     );
 };
 
