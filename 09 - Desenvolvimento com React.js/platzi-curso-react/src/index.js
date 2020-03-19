@@ -1,27 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; //Renderizar os componentes no DOM (Existem também o react nativa, react-canvas)
-import PropTypes from 'prop-types';
 
-const Usuario = props => {
-
+const focaNoElemento = elementoHtml =>
+    elementoHtml.focus();
+const App = props => {
+    const input1 = React.useRef(null);
+    const input2 = React.useRef(null);
+    React.useEffect(() =>{
+        console.log(input1.current);
+    })
     return (
         <div>
-            {props.id} - {props.nome} - {props.tipo}
+            <button
+                onClick={() =>
+                    focaNoElemento(input1.current)
+                }
+            > 
+                Foco no 01
+            </button>
+            <button
+                onClick={() =>
+                    focaNoElemento(input2.current)
+                }
+            > 
+                Foco no 02
+            </button>
+            <input type="text" ref={input1}/>
+            <input type="text" ref={input2}/>
         </div>
     );
 };
 
-Usuario.propTypes = {
-    id: PropTypes.number.isRequired,
-    nome: PropTypes.string.isRequired,
-    tipo: PropTypes.oneOf(['admin', 'normal']).isRequired
-};
-
-Usuario.defaultProps = {
-    tipo: 'admin'
-};
-
 ReactDOM.render(
-    <Usuario id={1} nome="Rose"/>,
+    <App />,
     document.getElementById('root')
 );
