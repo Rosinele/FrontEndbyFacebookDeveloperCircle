@@ -1,52 +1,63 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; //Renderizar os componentes no DOM (Existem também o react nativa, react-canvas)
 
-//
-const App = () => {
-    const [
-        searchValue, 
-        setSearchValue
-    ] = React.useState("");
+const useHAckerNewsApi = () => {
     const [query, setQuery] = React.useState("");
     const [items, setItems] = React.useState([]);
 
     React.useEffect(() => {
-        if (!query){
+        if (!query) {
             return;
         }
-        const search = async () =>{
+        const search = async () => {
             const result = await fetch(
                 'https://hn.algolia.com/api/v1/search_by_date?query=${query}&tags=story&numericFilters=created_at_i%3E2019-01-01'
             );
             const data = await result.json();
             setItems(data.hits);
-   
+
         };
         search();
     }, [query]);
-    return(
-       <div>
+    return{
+        setQuery,
+        items
+    };
+}
+
+const App = () => {
+    const [
+        searchValue,
+        setSearchValue
+    ] = React.useState("");
+    const {
+        setQuery,
+        items
+    } = useHAckerNewsApi();
+
+    return (
+        <div>
             <form
-            onSubmit={e => {
-                e.preventDefault();
-                setQuery(searchValue);
-            }}
-        >
-            <input 
-                type="text" 
-                value={searchValue} 
-                onChange={e =>
-                    setSearchValue(e.target.value) 
-                }
-            />
-            <button type="submit">Pesquisar</button>
-        </form>
-        <ul>
-            {items.map(i =>(
-                <li key={i.objectID}>{i.title}</li>
-            ))}
-        </ul>
-       </div>
+                onSubmit={e => {
+                    e.preventDefault();
+                    setQuery(searchValue);
+                }}
+            >
+                <input
+                    type="text"
+                    value={searchValue}
+                    onChange={e =>
+                        setSearchValue(e.target.value)
+                    }
+                />
+                <button type="submit">Pesquisar</button>
+            </form>
+            <ul>
+                {items.map(i => (
+                    <li key={i.objectID}>{i.title}</li>
+                ))}
+            </ul>
+        </div>
     )
 };
 
