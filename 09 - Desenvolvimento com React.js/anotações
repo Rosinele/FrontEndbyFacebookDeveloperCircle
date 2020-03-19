@@ -88,3 +88,7 @@ BICLIOTECAS PARA ESTILIZAR COMPONETES
 USESTATE
     Gerencia os estados internos de componentes funcionais.
     O primeiro argumento refere-se ao padrão desse estado, o estado inicial. O segundo arqumento é uma função para que você consiga alterar o estado.
+
+JSX
+    Babel é responsabel por renderizar/transformar o códido de JSX para JavaScript atrás do Babel.
+    
