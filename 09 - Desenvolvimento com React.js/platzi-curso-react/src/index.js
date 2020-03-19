@@ -1,32 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; //Renderizar os componentes no DOM (Existem também o react nativa, react-canvas)
 
-const focaNoElemento = elementoHtml =>
-    elementoHtml.focus();
-const App = props => {
-    const input1 = React.useRef(null);
-    const input2 = React.useRef(null);
-    React.useEffect(() =>{
-        console.log(input1.current);
-    })
+const cotacao = 5;
+const convertaDolarEmReal = dolar =>
+    dolar * cotacao;
+const convertaRealEmDolar = real =>
+    real / cotacao;
+
+const InputDeValor = ({ 
+    moeda, 
+    valor, 
+    onChange 
+}) => {
     return (
         <div>
-            <button
-                onClick={() =>
-                    focaNoElemento(input1.current)
-                }
-            > 
-                Foco no 01
-            </button>
-            <button
-                onClick={() =>
-                    focaNoElemento(input2.current)
-                }
-            > 
-                Foco no 02
-            </button>
-            <input type="text" ref={input1}/>
-            <input type="text" ref={input2}/>
+            <label>{moeda}</label>
+            <input 
+                type="number" 
+                value={valor || ''} 
+                onChange={e => onChange(e.target.value)}
+            />
+        </div>
+    );
+};
+
+const App = props => {
+    const [
+        valorEmDolar, 
+        setValorEmDolar
+    ] = React.useState();
+    return (
+        <div>
+            <InputDeValor 
+                moeda="R$"
+                valor={convertaDolarEmReal(valorEmDolar)}
+                onChange={v => setValorEmDolar(convertaRealEmDolar(v))}
+            />
+            <InputDeValor
+                 moeda="US$"
+                 valor={valorEmDolar}
+                 onChange={v => setValorEmDolar(v)}
+            />
         </div>
     );
 };

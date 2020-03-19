@@ -97,3 +97,7 @@ PROTYPES
         https://reactjs.org/docs/typechecking-with-proptypes.html
         instalar o pacote
             npm i prop-types ou yarn add prop-types
+
+REACT FRAGMENT
+    Utilizando quando por exemplo quero colocar duas divs, uma abaixo da outra.
+    
