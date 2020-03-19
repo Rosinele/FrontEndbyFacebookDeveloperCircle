@@ -91,4 +91,9 @@ USESTATE
 
 JSX
     Babel é responsabel por renderizar/transformar o códido de JSX para JavaScript atrás do Babel.
-    
+
+PROTYPES
+    Link da documentação do pacote
+        https://reactjs.org/docs/typechecking-with-proptypes.html
+        instalar o pacote
+            npm i prop-types ou yarn add prop-types
