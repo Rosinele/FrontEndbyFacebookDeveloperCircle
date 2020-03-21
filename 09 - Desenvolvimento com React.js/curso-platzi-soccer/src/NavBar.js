@@ -15,32 +15,42 @@ const links = [
     }
 ];
 const NavBar = () => {
-    const isBigEnough = useMediaQuery({ query: "(min-width: 510px)"});
+    const isBigEnough = useMediaQuery({ query: "(min-width: 575px)" });
     console.log("isBigEnough");
+
     const [open, setOpen] = React.useState();
+    const appLinks = links.map(l => (
+        <a key={l.to} href={l.to} className="nav-link">
+            {l.text}
+        </a>
+    ));
     return (
         <nav className='nav-bar'>
-            <div className='nav-samll'>
-                <button
-                    className='nav-small__button'
-                    onClick={() => setOpen(o => !o)}
-                    style={{
-                        borderBottom: '1px solid ${open ? "#fff" : "transparent"}'
-                    }}
-                >
-                    MENU
-                </button>
-                <div
-                    className="nav-small__links"
-                    style={{ display: open ? "block" : "none" }}
-                >
-                    {links.map(l => (
-                        <a key={l.to} href={l.to} className="nav-link">
-                            {l.text}
-                        </a>
-                    ))}
+            {isBigEnough ? (
+                <div className="nav-big">
+                    {appLinks}
                 </div>
-            </div>
+            ) : (
+                    <div className='nav-samll'>
+                        <button
+                            className='nav-small__button'
+                            onClick={() => setOpen(o => !o)}
+                            style={{
+                                borderBottom: '1px solid ${open ? "#fff" : "transparent"}'
+                            }}
+                        >
+                            MENU
+                </button>
+                        <div
+                            className="nav-small__links"
+                            style={{ display: open ? "block" : "none" }}
+                        >
+                            {appLinks}
+                        </div>
+                    </div>
+
+                )}
+
         </nav>
     );
 };
