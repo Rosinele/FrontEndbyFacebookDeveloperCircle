@@ -1,13 +1,23 @@
 import React from "react";
-import {BrowserRouter, Route} from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import "./App.css";
 
 import NavBar from "./NavBar.js";
+import Home from './Home';
+import Brasileirao from './Brasileirao';
+import LiveMatch from './LiveMatch';
 
 const App = () => (
-    <div>
-        <NavBar/>
-    </div>
+    <BrowserRouter>
+        <>
+        <NavBar />
+        <main>
+            <Route exact path="/" component={Home}/>
+            <Route path="/brasileirao" component={Brasileirao}/>
+            <Route path="/ao-vivo" component={LiveMatch}/>
+        </main>
+        </>
+    </BrowserRouter>
 );
 
 export default App;
