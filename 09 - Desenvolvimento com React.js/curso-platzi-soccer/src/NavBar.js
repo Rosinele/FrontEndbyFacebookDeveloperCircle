@@ -37,7 +37,7 @@ const NavBar = () => {
                             className='nav-small__button'
                             onClick={() => setOpen(o => !o)}
                             style={{
-                                borderBottom: '1px solid ${open ? "#fff" : "transparent"}'
+                                borderBottom: '1px solid {open ? "#fff" : "transparent"}'
                             }}
                         >
                             MENU
