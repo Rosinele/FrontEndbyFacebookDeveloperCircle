@@ -104,3 +104,7 @@ REACT FRAGMENT
 NAVEGAÇÃO RESPONSIVA
     instalar novo pacote para auxiliar
         npm install react-responsive
+
+ROTEAMENTO DE URLS
+    instalar pacote responsavel
+        npm install react-router-dom
