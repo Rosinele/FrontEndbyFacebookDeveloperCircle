@@ -101,3 +101,6 @@ PROTYPES
 REACT FRAGMENT
     Utilizando quando por exemplo quero colocar duas divs, uma abaixo da outra.
     
+NAVEGAÇÃO RESPONSIVA
+    instalar novo pacote para auxiliar
+        npm install react-responsive
