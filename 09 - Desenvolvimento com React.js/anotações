@@ -108,3 +108,8 @@ NAVEGAÇÃO RESPONSIVA
 ROTEAMENTO DE URLS
     instalar pacote responsavel
         npm install react-router-dom
+
+PERSISTÊNCIA DE ESTADOS 
+    instalar o pacote
+        npm install use-persisted-state
+        
