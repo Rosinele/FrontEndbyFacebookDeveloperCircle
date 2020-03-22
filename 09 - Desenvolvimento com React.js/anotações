@@ -115,10 +115,15 @@ PERSISTÊNCIA DE ESTADOS
 
 PUBLICAR NOSSA APLICAÇÃO 
     - links necessários
-        https://surge.sh/
+        https://surge.sh/ (Mesma coisa do Zeit.co)
         https://zeit.co/
         https://zeit.co/guides/deploying-react-with-now-cra
-        https://www.netlify.com/
+        https://www.netlify.com/ (Mesma coisa do Zeit.co)
     Executar Build
         npm run build //cria build otimizado
-        
+    Instalar Ferramenta zeit
+        npm i -g now
+    Logar na Ferramenta
+        now login
+    Cria ursl e estrutura os arquivos
+        now
