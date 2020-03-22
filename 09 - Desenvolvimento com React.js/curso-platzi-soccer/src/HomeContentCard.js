@@ -7,5 +7,5 @@ const HomeContentCard = ({title, text}) => (
         <h3>{title}</h3>
         <p>{text}</p>
     </div>
-)
+);
 export default HomeContentCard;
