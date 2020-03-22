@@ -112,4 +112,13 @@ ROTEAMENTO DE URLS
 PERSISTÊNCIA DE ESTADOS 
     instalar o pacote
         npm install use-persisted-state
+
+PUBLICAR NOSSA APLICAÇÃO 
+    - links necessários
+        https://surge.sh/
+        https://zeit.co/
+        https://zeit.co/guides/deploying-react-with-now-cra
+        https://www.netlify.com/
+    Executar Build
+        npm run build //cria build otimizado
         
