@@ -1,0 +1,17 @@
+ACTIONS
+	Actions são cargas de informações (Payloads) que enviam dados do seu apicativo para a STORE.
+	São a única fonte de informação para a store.
+	Envio para a store com o "dispatch()"
+	ACTION TYPES
+		Séries de constantes, Nomes do gatilhos que são chamados conforme as interações do usuário.
+	ACTION CREATORS
+		Implementação em forma de função dessas action. Sempre vão retornar a constante definida anteriormente e também pode o valor que essa action vai receber.
+STORE
+	Uma store contém toda a árvore de estados do seu aplicativo. A única maneira de alterar o estado dentro dele é "despachar" uma action nela.
+	Uma store não é uma classe. É apenas um objeto com alguns métodos. Para criá-lo, é necessário passar os reducers para createStore.
+REDUCERS
+	Os reducers especificam como o estado do aplicativo é alterado em respostas às ações/triggers(actions) enviadas para a store. Lembre-se de que as ações apenas descrevem o que aconteceu, mas não descreem como o estado será alterado(newState).
+STATE
+	é uma condiçaõ específica em que algo (objeto) está em um momento específico. No caso do redux tudo (store e state) fica armazenado na memória.
+SOCKETS
+	Pense nos sockets como um carteiro, que entrega o conteúdo com seu nome na web, você não precisa pedir constantemente para verificar se tem alguma mensagem ou e-mail, sockets faz isso por você, e te avisa quando houver.
